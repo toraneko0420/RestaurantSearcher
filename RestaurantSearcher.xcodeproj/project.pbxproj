@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F55432B2C051741002D7836 /* RestaurantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F55432A2C051741002D7836 /* RestaurantData.swift */; };
+		7F55435C2C055FD3002D7836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F55435A2C055E4D002D7836 /* Main.storyboard */; };
+		7F5543602C05670E002D7836 /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F55435F2C05670E002D7836 /* RestaurantItem.swift */; };
+		7F5543622C05A98F002D7836 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5543612C05A98F002D7836 /* TableViewController.swift */; };
+		7F55436A2C06CB03002D7836 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5543692C06CB03002D7836 /* RestaurantTableViewCell.swift */; };
 		7FC4B5A22C0068CE00D9F31C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC4B5A12C0068CE00D9F31C /* AppDelegate.swift */; };
 		7FC4B5A42C0068CE00D9F31C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC4B5A32C0068CE00D9F31C /* SceneDelegate.swift */; };
 		7FC4B5A62C0068CE00D9F31C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC4B5A52C0068CE00D9F31C /* ViewController.swift */; };
-		7FC4B5A92C0068CE00D9F31C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7FC4B5A82C0068CE00D9F31C /* Base */; };
 		7FC4B5AB2C0068CF00D9F31C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC4B5AA2C0068CF00D9F31C /* Assets.xcassets */; };
-		7FC4B5AE2C0068CF00D9F31C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7FC4B5AD2C0068CF00D9F31C /* Base */; };
+		7FC4B5B72C0068DB00D9F31C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC4B5B62C0068DB00D9F31C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F55432A2C051741002D7836 /* RestaurantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantData.swift; sourceTree = "<group>"; };
+		7F55435A2C055E4D002D7836 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7F55435F2C05670E002D7836 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
+		7F5543612C05A98F002D7836 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7F5543692C06CB03002D7836 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		7FC4B59E2C0068CE00D9F31C /* RestaurantSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC4B5A12C0068CE00D9F31C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FC4B5A32C0068CE00D9F31C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7FC4B5A52C0068CE00D9F31C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7FC4B5A82C0068CE00D9F31C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FC4B5A52C0068CE00D9F31C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		7FC4B5AA2C0068CF00D9F31C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7FC4B5AD2C0068CF00D9F31C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FC4B5AF2C0068CF00D9F31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FC4B5B62C0068DB00D9F31C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC4B5B72C0068DB00D9F31C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 			children = (
 				7FC4B5A02C0068CE00D9F31C /* RestaurantSearcher */,
 				7FC4B59F2C0068CE00D9F31C /* Products */,
+				7FC4B5B52C0068DB00D9F31C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +69,23 @@
 				7FC4B5A12C0068CE00D9F31C /* AppDelegate.swift */,
 				7FC4B5A32C0068CE00D9F31C /* SceneDelegate.swift */,
 				7FC4B5A52C0068CE00D9F31C /* ViewController.swift */,
-				7FC4B5A72C0068CE00D9F31C /* Main.storyboard */,
+				7F5543612C05A98F002D7836 /* TableViewController.swift */,
+				7F5543692C06CB03002D7836 /* RestaurantTableViewCell.swift */,
+				7F55435A2C055E4D002D7836 /* Main.storyboard */,
+				7F55432A2C051741002D7836 /* RestaurantData.swift */,
+				7F55435F2C05670E002D7836 /* RestaurantItem.swift */,
 				7FC4B5AA2C0068CF00D9F31C /* Assets.xcassets */,
-				7FC4B5AC2C0068CF00D9F31C /* LaunchScreen.storyboard */,
 				7FC4B5AF2C0068CF00D9F31C /* Info.plist */,
 			);
 			path = RestaurantSearcher;
+			sourceTree = "<group>";
+		};
+		7FC4B5B52C0068DB00D9F31C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FC4B5B62C0068DB00D9F31C /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC4B5AB2C0068CF00D9F31C /* Assets.xcassets in Resources */,
-				7FC4B5AE2C0068CF00D9F31C /* Base in Resources */,
-				7FC4B5A92C0068CE00D9F31C /* Base in Resources */,
+				7F55435C2C055FD3002D7836 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,31 +159,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC4B5A62C0068CE00D9F31C /* ViewController.swift in Sources */,
+				7F5543622C05A98F002D7836 /* TableViewController.swift in Sources */,
 				7FC4B5A22C0068CE00D9F31C /* AppDelegate.swift in Sources */,
+				7F5543602C05670E002D7836 /* RestaurantItem.swift in Sources */,
+				7F55432B2C051741002D7836 /* RestaurantData.swift in Sources */,
+				7F55436A2C06CB03002D7836 /* RestaurantTableViewCell.swift in Sources */,
 				7FC4B5A42C0068CE00D9F31C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		7FC4B5A72C0068CE00D9F31C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FC4B5A82C0068CE00D9F31C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7FC4B5AC2C0068CF00D9F31C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FC4B5AD2C0068CF00D9F31C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7FC4B5B02C0068CF00D9F31C /* Debug */ = {
@@ -295,6 +300,9 @@
 				DEVELOPMENT_TEAM = 5KLZ3SZW5T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantSearcher/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "許可してください";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "許可してください";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,6 +331,9 @@
 				DEVELOPMENT_TEAM = 5KLZ3SZW5T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantSearcher/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "許可してください";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "許可してください";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
