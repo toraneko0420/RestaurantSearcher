@@ -10,6 +10,7 @@ import Foundation
 class RestaurantData: ObservableObject {
     
     @Published var restaurantList: [RestaurantItem] = []
+    
     // JSONのデータ構造
     struct ResultJson: Codable {
         let results: Results
@@ -20,12 +21,23 @@ class RestaurantData: ObservableObject {
             struct Shop: Codable {
                 let name: String
                 let address: String
-                let logo_image: URL
+                let logo_image: URL?
                 let open: String
+                let access: String
+                let photo: Photo?
+                
+                struct Photo: Codable {
+                    let pc: PC?
+                    
+                    struct PC: Codable {
+                        let l: URL?
+                        let m: URL?
+                        let s: URL?
+                    }
+                }
             }
         }
     }
-
     
     // リストをクリア
     func clearList() {
@@ -43,8 +55,7 @@ class RestaurantData: ObservableObject {
             print("Invalid URL")
             return
         }
-//        print(req_url)
-//        print(keyword)
+        print(req_url)
         
         do {
             let (data, _) = try await URLSession.shared.data(from: req_url)
@@ -53,8 +64,6 @@ class RestaurantData: ObservableObject {
             
             let json = try decoder.decode(ResultJson.self, from: data)
             
-//            print(json)
-            
             DispatchQueue.main.async {
                 self.clearList()
                 for shop in json.results.shop {
@@ -62,14 +71,13 @@ class RestaurantData: ObservableObject {
                         name: shop.name,
                         image: shop.logo_image,
                         address: shop.address,
-                        open: shop.open
+                        open: shop.open,
+                        access: shop.access,
+                        photoPC: shop.photo?.pc?.l
                     )
                     self.restaurantList.append(restaurant)
                 }
-                
-//                print(self.restaurantList)
             }
-            
         } catch {
             print("Error: \(error)")
         }

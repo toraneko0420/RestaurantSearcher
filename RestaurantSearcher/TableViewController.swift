@@ -7,11 +7,10 @@
 
 import UIKit
 
-class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
     
-    var restaurantData = RestaurantData()
     var restaurantList: [RestaurantItem] = [] // 表示したいデータソース
     
     override func viewDidLoad() {
@@ -22,8 +21,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
+    //縦幅を設定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 250
     }
     
     // TableViewの行数を返す
@@ -34,12 +34,34 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // TableViewのセルを構築して返す
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as? RestaurantTableViewCell else {
-            print("Failed to dequeue a RestaurantTableViewCell.")
+            print("failed RestaurantTableViewCell.")
             return UITableViewCell()
         }
         let restaurant = restaurantList[indexPath.row]
         cell.configure(with: restaurant)
         return cell
+    }
+    
+    // セルをタップしたときの処理
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowDetailSegue", sender: indexPath)
+    }
+
+    // Segueの準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailSegue" {
+            if let detailVC = segue.destination as? DetailViewController {
+                if let indexPath = sender as? IndexPath {
+                    let selectedRestaurant = restaurantList[indexPath.row]
+                    detailVC.restaurant = selectedRestaurant
+                    print("\(selectedRestaurant)")
+                } else {
+                    print(IndexPath.self)
+                }
+            } else {
+                print("error: DetailViewController")
+            }
+        }
     }
 }
 

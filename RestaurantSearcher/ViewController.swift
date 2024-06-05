@@ -127,7 +127,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         }
     }
     
-    //指定された住所を緯度と経度に変換するためのメソッド
+    //指定された住所を緯度と経度に変換する
     func getAddress(address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address) { placemarks, error in
@@ -150,13 +150,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         if segue.identifier == "ShowTableViewSegue" {
             // 遷移先のViewControllerを取得
             if let destinationVC = segue.destination as? TableViewController {
-                // データをセット
                 destinationVC.restaurantList = restaurantList
             }
         }
-    }
-    
-    @IBAction func showTableViewButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "ShowTableViewSegue", sender: self)
     }
 }

@@ -7,10 +7,13 @@
 
 import Foundation
 
+// レストラン情報を格納するモデル
 struct RestaurantItem: Identifiable {
-    let id = UUID()
+    var id = UUID()
     let name: String
     let image: URL?
     let address: String
-    let open: String 
+    let open: String
+    let access: String
+    let photoPC: URL?
 }
